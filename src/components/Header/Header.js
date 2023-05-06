@@ -1,16 +1,27 @@
 import {Component} from "react";
 import "./Header.css"
+import store from "../../redux/configStore";
+import {connect} from "react-redux";
 
 class Header extends Component {
   render() {
-    const { nameTask, descriptionTask } = this.props;
+
+    const {task1, description1} = this.props;
+    // const { nameTask, descriptionTask } = this.props;
     return (
       <header className="App-header">
-        <h1>{nameTask}</h1>
-        <p>{descriptionTask}</p>
+        <h1>{task1}</h1>
+        <p>{description1}</p>
       </header>
     );
   }
 }
 
-export default Header;
+const mapStateToProps = (store) => {
+  return {
+    task1: store.task1,
+    description1: store.description1,
+  }
+}
+
+export default connect(mapStateToProps)(Header);

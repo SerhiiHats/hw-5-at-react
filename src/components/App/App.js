@@ -4,6 +4,8 @@ import Header from "../Header/Header";
 import FormFeedback from "../FormFeedback/FormFeedback";
 import ParagraphRequest from "../ParagraphRequest/ParagraphRequest";
 import ComponentConvert from "../ComponentConvert/ComponentConvert";
+import store from "../../redux/configStore";
+import {connect} from "react-redux";
 
 class App extends Component {
 
@@ -20,10 +22,10 @@ class App extends Component {
   }
 
   render() {
-
+const {task1, description1} = this.props;
     return (
       <div className="App">
-        <Header nameTask={this.state.task1} descriptionTask={this.state.description1}/>
+        <Header nameTask={task1} descriptionTask={description1}/>
         <FormFeedback handlerForm={(obj) => {
           this.handlerForm(obj)
         }}/>
@@ -36,4 +38,9 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (store) =>{
+
+}
+
+
+export default connect(mapStateToProps(store))(App);
