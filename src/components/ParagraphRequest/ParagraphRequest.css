@@ -1,0 +1,12 @@
+.ParagraphRequest{
+    background-color: #6E6C78;
+    color: white;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.ParagraphRequest p{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
