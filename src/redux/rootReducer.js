@@ -1,11 +1,11 @@
 import {combineReducers} from "redux";
-// import titleReducer from "../components/Title/titleReducer";
-// import listReducer from "../components/ListRedux/listReducer";
+import headerReducer from "../components/Header/headerReducer";
+import {formReducer} from "../components/FormFeedback/formReducer";
 
 
 export default combineReducers({
-    // title: titleReducer,
-    // list: listReducer,
+    dataTask: headerReducer,
+    dataRequest: formReducer,
   },
 );
 
