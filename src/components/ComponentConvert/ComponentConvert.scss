@@ -1,0 +1,37 @@
+.ComponentConvert {
+  background-color: #6E6C78;
+  color: white;
+  padding: 20px 0;
+
+  .wrap-convert {
+    width: 500px;
+    margin: 0 auto 0 auto;
+    border: 2px solid #61dafb;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    p {
+      margin: 5px 0;
+
+      &:first-child {
+        color: #B7CF52;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+
+    input {
+      width: 50%;
+      height: 30px;
+      border-radius: 4px;
+      margin: 5px 0;
+    }
+
+    .label {
+      margin-left: 5px;
+      color: #B7CF52;
+    }
+  }
+}
+
