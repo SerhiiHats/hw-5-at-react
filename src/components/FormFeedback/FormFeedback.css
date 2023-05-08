@@ -50,7 +50,7 @@
 .FormFeedback .Row:nth-child(2) .Comment {
     width: 98.5%;
     height: 100px;
-    margin: 0px;
+    margin: 0;
     resize: none;
     display: block;
 }

@@ -5,6 +5,7 @@ import FormFeedback from "../FormFeedback/FormFeedback";
 import ParagraphRequest from "../ParagraphRequest/ParagraphRequest";
 import ComponentConvert from "../ComponentConvert/ComponentConvert";
 import {connect} from "react-redux";
+import ComponentOffer from "../ComponentOffer/ComponentOffer";
 
 class App extends Component {
 
@@ -16,6 +17,7 @@ class App extends Component {
       <ParagraphRequest requestForm={dataRequest}/>
       <Header nameTask={dataHeader.task2} descriptionTask={dataHeader.description2}/>
       <ComponentConvert/>
+      <ComponentOffer/>
     </div>);
   }
 }
