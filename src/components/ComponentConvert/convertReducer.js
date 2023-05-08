@@ -2,7 +2,6 @@ import initialStore from "../../redux/initialStore";
 import {ADD_EURO, ADD_UAN} from "./convertAction";
 
 const convertReducer = (currency = initialStore.currency, action) => {
-  console.log(currency);
   switch (action.type) {
     case ADD_EURO: {
       return {

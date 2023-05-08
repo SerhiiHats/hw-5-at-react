@@ -16,14 +16,14 @@ class ComponentConvert extends Component {
           <p><span>40,72</span> Українська гривня</p>
           <p><input type={"number"} name={"euro-cur"} id={"euro"} placeholder={"Enter your money..."}
                     onChange={(e) => {
-                      dispatch(convertACAddEuro(e.target.value));
+                      dispatch(convertACAddEuro(Number(e.target.value)));
                     }} value={dataConvert.euro}/>
             <span className={"label"}>Евро</span>
           </p>
           <p>
             <input type={"number"} name={"uan-cur"} id={"uan"} placeholder={"Enter your money..."}
                    onChange={(e) => {
-                     dispatch(convertACAddUan(e.target.value));
+                     dispatch(convertACAddUan(Number(e.target.value)));
                    }} value={dataConvert.uan}/>
             <span className={"label"}>Українська гривня</span>
           </p>
@@ -34,7 +34,6 @@ class ComponentConvert extends Component {
 }
 
 const mapStateToProps = (store) => {
-  console.log(store);
   return {
     dataConvert: store.dataConvert
 
