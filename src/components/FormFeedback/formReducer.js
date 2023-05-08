@@ -1,7 +1,7 @@
 import initialStore from "../../redux/initialStore";
 import {ADD_REQUEST} from "./formAction";
 
-export const formReducer = (request = initialStore.requestForm, action) => {
+const formReducer = (request = initialStore.requestForm, action) => {
   switch (action.type) {
     case ADD_REQUEST: {
       return {
@@ -12,3 +12,5 @@ export const formReducer = (request = initialStore.requestForm, action) => {
       return request;
   }
 }
+
+export default formReducer;
