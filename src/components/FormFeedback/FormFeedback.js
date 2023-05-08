@@ -26,15 +26,14 @@ class FormFeedback extends Component {
 
     const {dispatch} = this.props;
 
-    return (
-      <div className={"ContainerForm"}>
+    return (<div className={"ContainerForm"}>
         <form className={"FormFeedback"}>
           <div className={"Row"}>
             <label>ім'я
               <input type={"text"} name={"name"} id={"name"} placeholder={"Enter your name..."}
                      onChange={(e) => {
                        this.handlerValue(e, "userName")
-                     }} value={this.state.userName} required={true}/>
+                     }} value={this.state.userName}/>
             </label>
             <label>E-mail
               <input type={"email"} name={"email"} id={"email"} placeholder={"Enter your e-mail..."}
@@ -61,8 +60,7 @@ class FormFeedback extends Component {
           </div>
         </form>
 
-      </div>
-    );
+      </div>);
   }
 }
 
