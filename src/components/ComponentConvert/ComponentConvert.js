@@ -1,6 +1,8 @@
 import { connect } from "react-redux";
 import "./ComponentConvert.scss";
 import { Component } from "react";
+import { ADD_UAN, ADD_EURO } from "./convertAction";
+
 
 class ComponentConvert extends Component {
 
@@ -16,13 +18,14 @@ class ComponentConvert extends Component {
 
 
   render() {
-    const {dataConvert} = this.props;
+    const {dataConvert, dispatch} = this.props;
     console.log(this.props);
     console.log(this.props.dataConvert);
     console.log(this.props.dataConvert.currency);
     console.log(this.props.dataConvert.currency.euro);
     console.log(this.props.dataConvert.currency.uan);
     console.log(dataConvert.currency.uan);
+    console.log(dataConvert.currency.euro);
 
 
     return (
@@ -33,15 +36,25 @@ class ComponentConvert extends Component {
           <p><span>40,72</span> Українська гривня</p>
           <p><input type={"number"} name={"euro-cur"} id={"euro"} placeholder={"Enter your money..."}
             onChange={(e) => {
-              this.handlerValue(e, "euro")
-            }} value={this.state.euro} />
+              // this.handlerValue(e, "euro")
+              dispatch(convertACAddEuro(ADD_EURO));
+
+            }} 
+            // value={this.state.euro} 
+            value={dataConvert.currency.euro} 
+            
+            />
             <span className={"label"}>Евро</span>
           </p>
           <p>
             <input type={"number"} name={"uan-cur"} id={"uan"} placeholder={"Enter your money..."}
               onChange={(e) => {
-                this.handlerValue(e, "uan")
-              }} value={this.state.uan} />
+                // this.handlerValue(e, "uan")
+                dispatch(convertACAddUan(ADD_UAN));
+              }} 
+              // value={this.state.uan} 
+              value={dataConvert.currency.uan} 
+              />
             <span className={"label"}>Українська гривня</span>
           </p>
         </div>
