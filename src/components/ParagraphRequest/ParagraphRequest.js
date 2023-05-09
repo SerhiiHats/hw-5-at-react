@@ -1,16 +1,27 @@
+import { connect } from "react-redux";
 import "./ParagraphRequest.css"
 import {Component} from "react";
 
 class ParagraphRequest extends Component {
+ 
 
   render() {
-    const {requestForm} = this.props;
+    const {requestForm} = this.props; 
+    const {dataRequest} = this.props;
+    console.log(dataRequest);
     return (
       <div className={"ParagraphRequest"}>
-        <p>{requestForm === false ? "No request" : JSON.stringify(requestForm)}</p>
+        <p>{dataRequest === false ? "No request" : JSON.stringify(dataRequest.request)}</p>
       </div>
     )
   }
 }
 
-export default ParagraphRequest;
+
+const mapStateToProps = (store) => {
+  return {
+    dataRequest: store.dataRequest,
+  }
+}
+
+export default connect(mapStateToProps)(ParagraphRequest);

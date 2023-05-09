@@ -14,7 +14,7 @@ class App extends Component {
     return (<div className="App">
       <Header nameTask={dataHeader.task1} descriptionTask={dataHeader.description1}/>
       <FormFeedback/>
-      <ParagraphRequest requestForm={dataRequest}/>
+      <ParagraphRequest/>
       <Header nameTask={dataHeader.task2} descriptionTask={dataHeader.description2}/>
       <ComponentConvert/>
       <ComponentOffer/>
@@ -24,8 +24,7 @@ class App extends Component {
 
 const mapStateToProps = (store) => {
   return {
-    dataHeader: store.dataTask,
-    dataRequest: store.dataRequest,
+    dataHeader: store.dataTask,   
   }
 }
 
