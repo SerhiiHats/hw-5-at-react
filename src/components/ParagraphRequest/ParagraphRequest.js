@@ -5,10 +5,8 @@ import {Component} from "react";
 class ParagraphRequest extends Component {
  
 
-  render() {
-    const {requestForm} = this.props; 
-    const {dataRequest} = this.props;
-    console.log(dataRequest);
+  render() {   
+    const {dataRequest} = this.props; 
     return (
       <div className={"ParagraphRequest"}>
         <p>{dataRequest === false ? "No request" : JSON.stringify(dataRequest.request)}</p>
